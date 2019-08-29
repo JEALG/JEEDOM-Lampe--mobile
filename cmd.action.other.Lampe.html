@@ -1,4 +1,4 @@
-<div style="width:40px;height:50px;vertical-align: top;" class="cmd tooltips cmd-widget cursor #history#" data-type="action" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#" data-eqLogic_id="#eqLogic_id#">
+<div style="width:40px;height:50px;vertical-align: top;" class="cmd #history#" data-type="action" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#" data-eqLogic_id="#eqLogic_id#">
  	<!-- Info Widget
 		Basé sur les widget de 	  : ksoul78 / jimmy / snow51
 		Mise à jour 			  : JAG 20190516 : Simplification code
@@ -10,28 +10,28 @@
     <script>
         jeedom.cmd.update['#id#'] = function(_options){
         // Paramètrage du logo
-      			var srcImglogo	    = ('#logo-M#'!='#'+'logo-M#') ? "#logo-M#" : "Lampe";
-      			var srcImglogo_T 	= ('#logo_type-M#'!='#'+'logo_type-M#') ? "#logo_type-M#" : "png";
+      			var srcImglogo_M	= ('#logo-M#'!='#'+'logo-M#') ? "#logo-M#" : "Lampe";
+      			var srcImglogo_M_T 	= ('#logo_type-M#'!='#'+'logo_type-M#') ? "#logo_type-M#" : "png";
 		// Paramètre "sizeh" & "sizew"
-				var srcImgHeight	= is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):35;
-				var srcImgWidth 	= is_numeric('#sizew-M#') ? parseFloat('#sizew-M#'):35;
-  				var srcImgSize 		= 'height='+srcImgHeight+'px width='+srcImgWidth+'px';
+				var srcImgHeight_M	= is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):35;
+				var srcImgWidth_M 	= is_numeric('#sizew-M#') ? parseFloat('#sizew-M#'):35;
+  				var srcImgSize_M    = 'height='+srcImgHeight_M+'px width='+srcImgWidth_M+'px';
 		// Paramétrage des images
-				var srcImgURL 		= 'plugins/widget/core/template/mobile/cmd.action.other.Lampe/';
+				var srcImgURL_M 	= 'plugins/widget/core/template/mobile/cmd.action.other.Lampe/';
 
             if (_options.display_value == '1' || _options.display_value == 1 || _options.display_value == '99' || _options.display_value == 99 || _options.display_value == 'on') {
                 if (jeedom.cmd.normalizeName('#name#') == 'on') {
                     $('.cmd[data-cmd_id=#id#]').hide();
                 }else{
                     $('.cmd[data-cmd_id=#id#]').show();
-                    $('.cmd[data-cmd_id=#id#] .iconCmd#id#').empty().append('<img src="'+srcImgURL +srcImglogo +'-ON.'+ srcImglogo_T+'" '+srcImgSize+'>');
+                    $('.cmd[data-cmd_id=#id#] .iconCmd#id#').empty().append('<img src="'+srcImgURL_M +srcImglogo_M +'-ON.'+ srcImglogo_M_T+'" '+srcImgSize_M+'>');
                 }
             } else {
                 if (jeedom.cmd.normalizeName('#name#') == 'off') {
                     $('.cmd[data-cmd_id=#id#]').hide();
                 }else{
                     $('.cmd[data-cmd_id=#id#]').show();
-                    $('.cmd[data-cmd_id=#id#] .iconCmd#id#').empty().append('<img src="'+srcImgURL +srcImglogo +'-OFF.'+ srcImglogo_T+'" '+srcImgSize+'>');
+                    $('.cmd[data-cmd_id=#id#] .iconCmd#id#').empty().append('<img src="'+srcImgURL_M +srcImglogo_M +'-OFF.'+ srcImglogo_M_T+'" '+srcImgSize_M+'>');
                 }
             }
         }

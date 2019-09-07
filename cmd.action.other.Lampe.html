@@ -1,7 +1,7 @@
 <div style="width:40px;height:50px;vertical-align: top;" class="cmd #history#" data-type="action" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#" data-eqLogic_id="#eqLogic_id#">
  	<!-- Info Widget
 		Basé sur les widget de 	  : ksoul78 / jimmy / snow51
-		Mise à jour 			  : JAG 20190516 : Simplification code
+		Mise à jour 			  : JAG 20190907 : Normalisation nom images => Merci à mich0111
 	-->
     <center>
         <div class="cmdName #hide_name#">#valueName#</div>
@@ -10,7 +10,7 @@
     <script>
         jeedom.cmd.update['#id#'] = function(_options){
         // Paramètrage du logo
-      			var srcImglogo_M	= ('#logo-M#'!='#'+'logo-M#') ? "#logo-M#" : "Lampe";
+      			var srcImglogo_M	= ('#logo-M#'!='#'+'logo-M#') ? "#logo-M#" : "la_ampoule";
       			var srcImglogo_M_T 	= ('#logo_type-M#'!='#'+'logo_type-M#') ? "#logo_type-M#" : "png";
 		// Paramètre "sizeh" & "sizew"
 				var srcImgHeight_M	= is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):35;
